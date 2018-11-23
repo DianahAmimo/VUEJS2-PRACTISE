@@ -8,6 +8,9 @@
   </head>
   <body>
     <div class="" id="vue-app">
+      <p>
+        ....................Data and Methods...........................
+      </p>
       <h1>
         {{greet('Nachmittag')}}
       </h1>
@@ -17,6 +20,14 @@
       <p>
         Job: {{job}}
       </p>
+      <p>
+        ....................Data Binding...........................
+      </p>
+      <a :href="website">The Net Ninja</a> <br><br>
+
+      <input type="text" :value="name">
+
+      <p v-html="websiteTag"></p>
     </div>
     <script src="app.js"></script>
   </body>
