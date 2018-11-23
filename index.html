@@ -23,7 +23,7 @@
       <p>
         ....................Data Binding...........................
       </p>
-      <a :href="website">The Net Ninja</a> <br><br>
+      <a :href="website">Dianne's Profile</a> <br><br>
 
       <input type="text" :value="name">
 
@@ -33,7 +33,7 @@
         ....................Events...........................
       </p>
 
-      <button @click="add(1)">Add a year</button>
+      <button @click.once="add(1)">Add a year</button>
 
       <button @click="subtract(1)">Subtract a year</button>
 
@@ -47,6 +47,12 @@
       <div id="canvas" v-on:mousemove="updateXY">
         {{x}}, {{y}}
       </div>
+
+      <p>
+        ....................Event Modifiers...........................
+      </p>
+
+      <a @click.prevent="click" href="https://www.linkedin.com/in/dianah-amimo-4b8036107/">My LinkedIn Profile</a>
     </div>
     <script src="app.js"></script>
   </body>
