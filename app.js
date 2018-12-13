@@ -12,7 +12,9 @@ new Vue({
         name1: '',
         age1: '',
         a: 0,
-        b: 0
+        b: 0,
+        available: false,
+        nearby: false
     },
 
     methods: {
@@ -55,6 +57,13 @@ new Vue({
         addToB: function () {
             console.log("Add to b");
             return this.b + this.age;
+        },
+        
+        compClasses: function () {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });
