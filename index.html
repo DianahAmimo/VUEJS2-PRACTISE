@@ -9,7 +9,7 @@
 <body>
 <div class="" id="vue-app">
     <p>
-        ....................Data and Methods...........................
+        <b>....................Data and Methods...........................</b>
     </p>
     <h1>
         {{greet('Nachmittag')}}
@@ -21,7 +21,7 @@
         Job: {{job}}
     </p>
     <p>
-        ....................Data Binding...........................
+        <b>....................Data Binding...........................</b>
     </p>
     <a :href="website">Dianne's Profile</a> <br><br>
 
@@ -30,7 +30,7 @@
     <p v-html="websiteTag"></p>
 
     <p>
-        ....................Events...........................
+        <b>....................Events...........................</b>
     </p>
 
     <button @click.once="add(1)">Add a year</button>
@@ -49,19 +49,33 @@
     </div>
 
     <p>
-        ....................Event Modifiers...........................
+        <b>....................Event Modifiers...........................</b>
     </p>
 
     <a @click.prevent="click" href="https://www.linkedin.com/in/dianah-amimo-4b8036107/">My LinkedIn Profile</a>
 
     <p>
-        ....................Keyboard Events...........................
+        <b>....................Keyboard Events...........................</b>
     </p>
     <label for="name">Name</label>
     <input type="text" v-on:keyup.enter="logName">
 
     <label for="age">Age</label>
     <input type="text" v-on:keyup.alt.enter="logAge">
+
+    <p>
+        <b>....................Two Way Data Binding...........................</b>
+    </p>
+
+    <label>Name</label>
+    <input type="text" v-model="name1">
+
+    <span>{{name1}}</span>
+
+    <label>Age</label>
+    <input type="text" v-model="age1">
+
+    <span>{{age1}}</span>
 </div>
 <script src="app.js"></script>
 </body>

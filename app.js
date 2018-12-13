@@ -8,7 +8,9 @@ new Vue({
         websiteTag: '<a href="https://www.linkedin.com/in/dianah-amimo-4b8036107/">My LinkedIn Profile</a>',
         age: 24,
         x: 0,
-        y: 0
+        y: 0,
+        name1: '',
+        age1: ''
     },
 
     methods: {
