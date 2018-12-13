@@ -30,7 +30,15 @@ new Vue({
         },
 
         click : function () {
-            alert('You clicked me!!')
+            alert('You clicked me!!');
+        },
+
+        logName: function () {
+            console.log('Sie haben ihren Namen eingegeben');
+        },
+
+        logAge: function () {
+            console.log('Sie haben ihr alter eingegeben');
         }
     }
 });

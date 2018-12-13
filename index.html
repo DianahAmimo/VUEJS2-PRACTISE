@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>VueJS Tutorial</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
-  </head>
-  <body>
-    <div class="" id="vue-app">
-      <p>
+</head>
+<body>
+<div class="" id="vue-app">
+    <p>
         ....................Data and Methods...........................
-      </p>
-      <h1>
+    </p>
+    <h1>
         {{greet('Nachmittag')}}
-      </h1>
-      <p>
+    </h1>
+    <p>
         Name: {{name}}
-      </p>
-      <p>
+    </p>
+    <p>
         Job: {{job}}
-      </p>
-      <p>
+    </p>
+    <p>
         ....................Data Binding...........................
-      </p>
-      <a :href="website">Dianne's Profile</a> <br><br>
+    </p>
+    <a :href="website">Dianne's Profile</a> <br><br>
 
-      <input type="text" :value="name">
+    <input type="text" :value="name">
 
-      <p v-html="websiteTag"></p>
+    <p v-html="websiteTag"></p>
 
-      <p>
+    <p>
         ....................Events...........................
-      </p>
+    </p>
 
-      <button @click.once="add(1)">Add a year</button>
+    <button @click.once="add(1)">Add a year</button>
 
-      <button @click="subtract(1)">Subtract a year</button>
+    <button @click="subtract(1)">Subtract a year</button>
 
-      <button @dblclick="add(10)">Add 10 years</button>
+    <button @dblclick="add(10)">Add 10 years</button>
 
-      <button @dblclick="subtract(10)">Subtract 10 years</button>
-      <p>
+    <button @dblclick="subtract(10)">Subtract 10 years</button>
+    <p>
         My age is {{age}}
-      </p>
+    </p>
 
-      <div id="canvas" v-on:mousemove="updateXY">
+    <div id="canvas" v-on:mousemove="updateXY">
         {{x}}, {{y}}
-      </div>
-
-      <p>
-        ....................Event Modifiers...........................
-      </p>
-
-      <a @click.prevent="click" href="https://www.linkedin.com/in/dianah-amimo-4b8036107/">My LinkedIn Profile</a>
     </div>
-    <script src="app.js"></script>
-  </body>
+
+    <p>
+        ....................Event Modifiers...........................
+    </p>
+
+    <a @click.prevent="click" href="https://www.linkedin.com/in/dianah-amimo-4b8036107/">My LinkedIn Profile</a>
+
+    <p>
+        ....................Keyboard Events...........................
+    </p>
+    <label for="name">Name</label>
+    <input type="text" v-on:keyup.enter="logName">
+
+    <label for="age">Age</label>
+    <input type="text" v-on:keyup.alt.enter="logAge">
+</div>
+<script src="app.js"></script>
+</body>
 </html>
