@@ -10,7 +10,9 @@ new Vue({
         x: 0,
         y: 0,
         name1: '',
-        age1: ''
+        age1: '',
+        a: 0,
+        b: 0
     },
 
     methods: {
@@ -41,6 +43,18 @@ new Vue({
 
         logAge: function () {
             console.log('Sie haben ihr alter eingegeben');
+        }
+    },
+
+    computed: {
+        addToA: function () {
+            console.log("Add to a");
+            return this.a + this.age;
+        },
+
+        addToB: function () {
+            console.log("Add to b");
+            return this.b + this.age;
         }
     }
 });
